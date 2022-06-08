@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #5cb85c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Joan', serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 3rem;
+    /* height: 35vh; */
+    width: 75vw;
+    overflow: auto;
+    background-color: white;
+}
+.container h1{
+    font-size: 2rem;
+    margin: 1rem;
+    letter-spacing: .15rem;
+    color: #292b2c;
+    font-family: sans-serif;
+}
+#input-box{
+    background-color: white;
+    width: 75vw;
+    height: 30vh;
+    text-align: center;
+}
+#input-box h1{
+    text-align: left;
+    /* display: inline-block; */
+    margin-left: 2rem;
+    color: forestgreen;
+}
+ #input-box input{
+    width: 50vw;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 1px solid orange;
+    font-size: 1.2rem;
+    color: rgb(2, 159, 222);
+    font-family: 'Joan', serif;
+    /* display: flex; */
+}
+ #input-box #btn{
+    width: 6vw;
+    height: 6vh;
+    /* padding: .5rem; */
+    font-size: 2rem;
+    background-color: #292b2c;
+    border: none;
+    color: white;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+#input-box #btn:hover{
+    transform: scale(1.2);
+}
+#list-items{
+    /* margin-top: 1rem; */
+    justify-content: left;
+    background-color: white;
+    width: 75vw;
+    height: 50vh;
+    overflow-y: auto;
+    transition: all .5s;
+
+}
+#list-items ul{
+    background-color: #f0ad4e;
+    width: 70vw;
+    margin-left: 1rem;
+    list-style-type: none;
+    /* overflow: auto; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all .5s;
+}
+
+#list-items ul li{
+    display: flex;
+    justify-content: space-between;
+    padding:.5rem;
+    font-family: 'Joan', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2rem;
+    border-top: 5px solid white;
+    overflow-x: auto;
+    transition: all 1s;
+}
+#list-items ul .btnTick{
+    width: auto;
+    height: auto;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+#list-items ul i{
+    color: red;
+    font-size: 1.7rem;
+    cursor: pointer;
+    opacity: .8;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    transition: all .5s;
+}
+#list-items ul i:hover{
+    opacity: 1;
+}
+#input-box .clear{
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+#input-box .clear #clear{
+    background-color: #d9534f;
+    padding: .5rem;
+    border: none;
+    color: #f7f7f7;
+}
+#input-box .clear #clear:hover{
+    box-shadow: 1px 1px 10px 1px #d9534f;
+    cursor: pointer;
+}
