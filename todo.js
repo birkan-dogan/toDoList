@@ -70,3 +70,26 @@ function yakala(e){
     }
 }
 
+// enter to add
+
+input.onkeydown = function enter(e){
+    // console.log(e);
+    if(e.keyCode === 13){
+        butonArtı.onclick();
+    }
+}
+
+// clear btn
+const clear = document.getElementById("clear");
+console.log(ul);
+clear.onclick = function(){
+    if(confirm("Do you really want to delete the whole list?")){
+    for(let i = ul.childElementCount - 1; i >= 0 ;i--){
+        console.log(i);
+        clear.parentElement.parentElement.previousElementSibling.children[0].children[i].remove();
+    }}
+}
+
+// progress bar will be added
+// const tut = document.getElementById("progress");
+// tut.innerHTML = `${progress} OUT OF ${toplam} COMPLETED
