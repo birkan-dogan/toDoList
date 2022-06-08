@@ -35,3 +35,38 @@ butonArtı.onclick = function(){
     // return toplam
     }
 }
+// capturing for list
+
+const list = document.getElementById("list-items");
+list.addEventListener("click",yakala);
+
+function yakala(e){
+    // console.log(e.target);
+    if(e.target.classList.contains("delete")){
+        if(e.target.parentNode.children[0].innerHTML =="💪"){
+            e.target.parentNode.style.backgroundColor = "#d9534f";
+            e.target.parentNode.remove();
+        }
+        else{
+            alert("You should complete the task before delete")
+        }
+    }
+    if(e.target.classList.contains("btnTick")){
+        if(e.target.innerHTML == "💪"){
+            e.target.innerHTML = "#";
+            // console.log("hello");
+            e.target.nextElementSibling.style.textDecoration = "none";
+            e.target.parentNode.style.backgroundColor = "#f0ad4e";
+            e.target.parentNode.style.transform = "rotateY(360deg)";
+        } else{
+            e.target.innerHTML = "💪"
+            e.target.nextElementSibling.style.textDecoration = "line-through";
+            e.target.parentNode.style.backgroundColor = "#5cb85c";
+            e.target.parentNode.style.transform = "rotateX(360deg)";
+            // progress++;
+            // console.log(progress);
+        }
+            // return progress;
+    }
+}
+
