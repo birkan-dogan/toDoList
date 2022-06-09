@@ -5,7 +5,7 @@ const d = new Date();
 let day = weekday[d.getDay()];
 h1.innerHTML += " " + day + " 👋";
 
-const input = document.getElementById("item"); // add item
+let input = document.getElementById("item"); // add item
 const ul = document.querySelector("ul");
 const butonArtı = document.getElementById("btn");
 
@@ -33,7 +33,8 @@ butonArtı.onclick = function(){
     ul.appendChild(listItem);
     // toplam++
     // return toplam
-    }
+    input.value = "";
+}
 }
 // capturing for list
 
@@ -85,7 +86,7 @@ console.log(ul);
 clear.onclick = function(){
     if(confirm("Do you really want to delete the whole list?")){
     for(let i = ul.childElementCount - 1; i >= 0 ;i--){
-        console.log(i);
+        // console.log(i);
         clear.parentElement.parentElement.previousElementSibling.children[0].children[i].remove();
     }}
 }
